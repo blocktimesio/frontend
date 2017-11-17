@@ -14,6 +14,8 @@ const Link = styled.a`
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   line-height: 3.5rem;
+  font-size: 15px;
+  font-weight: 500;
   text-decoration: none;
   color: #fff;
   border-left: 1px solid rgba(255, 255, 255, 0.2);

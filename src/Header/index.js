@@ -43,7 +43,7 @@ const RightWrapper = styled.div`
 export default function() {
   return (
     <Header>
-      <div class="container">
+      <div className="container">
         <Content>
           <Logo href="#">
             <img alt="Blocktimes" src={logo} />
