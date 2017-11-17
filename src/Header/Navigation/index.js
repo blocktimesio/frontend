@@ -3,7 +3,10 @@ import styled from "styled-components";
 
 const Navigation = styled.nav`
   display: flex;
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+  a:last-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+  }
 `;
 
 const Link = styled.a`

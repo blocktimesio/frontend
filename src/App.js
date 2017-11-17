@@ -1,13 +1,18 @@
 import React from "react";
+import styled from "styled-components";
 import Header from "./Header";
-import Main from "./Main";
+import News from "./News";
+
+const Main = styled.main`
+  font-family: "Intel UI", Arial, sans-serif;
+`;
 
 function App() {
   return (
-    <div>
+    <Main>
       <Header />
-      <Main />
-    </div>
+      <News />
+    </Main>
   );
 }
 

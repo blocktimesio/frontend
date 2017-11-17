@@ -1,14 +1,15 @@
 import React from "react";
+import styled from "styled-components";
+
 import logo from "../assets/logo.svg";
 import login from "../assets/log-in.svg";
-import styled from "styled-components";
 import Navigation from "./Navigation";
 
-const Wrapper = styled.div`
+const Header = styled.header`
   background-color: #232323;
 `;
 
-const Header = styled.header`
+const Content = styled.div`
   display: flex;
   justify-content: space-between;
 
@@ -41,9 +42,9 @@ const RightWrapper = styled.div`
 
 export default function() {
   return (
-    <Wrapper>
+    <Header>
       <div class="container">
-        <Header>
+        <Content>
           <Logo href="#">
             <img alt="Blocktimes" src={logo} />
           </Logo>
@@ -53,8 +54,8 @@ export default function() {
               <img alt="Login" src={login} />
             </Login>
           </RightWrapper>
-        </Header>
+        </Content>
       </div>
-    </Wrapper>
+    </Header>
   );
 }
