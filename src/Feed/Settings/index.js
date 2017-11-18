@@ -63,13 +63,13 @@ const ThemeText = styled.span`
 export default function() {
   return (
     <Settings>
-      <div className="col-xs-12 col-md-4">
+      <div className="col-xs-12">
         <Order>
           <OrderText>Show in order</OrderText>
           <Switch />
         </Order>
       </div>
-      <div className="col-xs-12 col-md-4">
+      <div className="col-xs-12">
         <Theme>
           <ThemeDot />
           <ThemeText>Bitcoin is edgy and stable, they said…</ThemeText>
