@@ -72,7 +72,7 @@ export default function() {
       <div className="col-xs-12 col-md-4">
         <Theme>
           <ThemeDot />
-          <ThemeText>Bitcoin is edgy and unstable, they said…</ThemeText>
+          <ThemeText>Bitcoin is edgy and stable, they said…</ThemeText>
         </Theme>
       </div>
       <div className="col-md-4" />
