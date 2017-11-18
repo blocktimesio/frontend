@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Article from "./Article";
+import LoadButton from "../LoadButton";
 
 const Container = styled.section`
   padding-left: 0.75rem;
@@ -58,6 +59,7 @@ function News() {
         info="Techmeme · 2.5K views · 144 comments"
         tags="BTC, RISE"
       />
+      <LoadButton />
     </Container>
   );
 }
