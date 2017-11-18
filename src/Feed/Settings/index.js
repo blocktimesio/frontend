@@ -2,11 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Switch from "../../common/Switch";
 
-const Wrapper = styled.div`
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
-`;
-
 const Settings = styled.div`
   display: flex;
   justify-content: space-between;
@@ -16,8 +11,12 @@ const Settings = styled.div`
 const Order = styled.div`
   display: flex;
   justify-content: center;
+
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+
   font-size: 15px;
   line-height: 1.38;
   color: #afafaf;
@@ -32,10 +31,14 @@ const Theme = styled.div`
   display: flex;
   justify-content: center;
   align-items: middle;
+
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
   padding-top: 0.75rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-bottom: 0.75rem;
+
   border-bottom: 1px solid #ebebeb;
 `;
 
@@ -59,22 +62,20 @@ const ThemeText = styled.span`
 
 export default function() {
   return (
-    <Wrapper>
-      <Settings>
-        <div className="col-xs-12 col-md-4">
-          <Order>
-            <OrderText>Show in order</OrderText>
-            <Switch />
-          </Order>
-        </div>
-        <div className="col-xs-12 col-md-4">
-          <Theme>
-            <ThemeDot />
-            <ThemeText>Bitcoin is edgy and unstable, they said…</ThemeText>
-          </Theme>
-        </div>
-        <div className="col-md-4" />
-      </Settings>
-    </Wrapper>
+    <Settings>
+      <div className="col-xs-12 col-md-4">
+        <Order>
+          <OrderText>Show in order</OrderText>
+          <Switch />
+        </Order>
+      </div>
+      <div className="col-xs-12 col-md-4">
+        <Theme>
+          <ThemeDot />
+          <ThemeText>Bitcoin is edgy and unstable, they said…</ThemeText>
+        </Theme>
+      </div>
+      <div className="col-md-4" />
+    </Settings>
   );
 }

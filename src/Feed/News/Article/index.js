@@ -1,14 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import Article from "./Article";
 
-function News() {
+function Article() {
   return (
     <div>
-      <Article />
-      <Article />
+      <div>sdsdfsdf</div>
     </div>
   );
 }
 
-export default News;
+export default Article;
