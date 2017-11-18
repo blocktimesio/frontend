@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -56,7 +56,6 @@ const TitleLink = styled.a`
 
 const Info = styled.p`
   margin: 0;
-  margin-bottom: 0.625rem;
   padding: 0;
   font-size: 0.8125rem;
   line-height: 1.38;
@@ -65,6 +64,7 @@ const Info = styled.p`
 
 const Tags = styled.p`
   margin: 0;
+  margin-top: 0.625rem;
   padding: 0;
   font-size: 0.8125rem;
   font-weight: 500;
@@ -73,27 +73,30 @@ const Tags = styled.p`
   color: #ff6060;
 `;
 
-function Article() {
-  return (
-    <article>
-      <Wrapper>
-        <LeftWrapper>
-          <Date>12h</Date>
-        </LeftWrapper>
-        <RightWrapper>
-          <Title>
-            <TitleLink href="#">
-              EU Officials Reveal €5 Million 'Blockchains for Social Good'
-              Contest
-            </TitleLink>
-          </Title>
-          <Info> @funnycryptoguy · 26K views · 1405 comments</Info>
-          <Tags>XRP, BTC, GOV, DEV, LSK</Tags>
-        </RightWrapper>
-      </Wrapper>
-      <Separator />
-    </article>
-  );
+class Article extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <article>
+        <Wrapper>
+          <LeftWrapper>
+            <Date>{this.props.date}</Date>
+          </LeftWrapper>
+          <RightWrapper>
+            <Title>
+              <TitleLink href="#">{this.props.title}</TitleLink>
+            </Title>
+            <Info>{this.props.info}</Info>
+            <Tags>{this.props.tags}</Tags>
+          </RightWrapper>
+        </Wrapper>
+        <Separator />
+      </article>
+    );
+  }
 }
 
 export default Article;
