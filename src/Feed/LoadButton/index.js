@@ -7,6 +7,8 @@ const Button = styled.button`
   justify-content: center;
   margin: 0;
   padding: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   width: 100%;
   border: none;
   background-color: transparent;
