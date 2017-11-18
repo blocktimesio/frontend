@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-const Wrapper = styled.div`
+const Link = styled.a`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   padding-top: 0.75rem;
   padding-bottom: 1rem;
 
+  text-decoration: none;
   overflow-wrap: break-word;
 `;
 
@@ -81,7 +82,7 @@ class Article extends Component {
   render() {
     return (
       <article>
-        <Wrapper>
+        <Link href="#">
           <LeftWrapper>
             <Date>{this.props.date}</Date>
           </LeftWrapper>
@@ -92,7 +93,7 @@ class Article extends Component {
             <Info>{this.props.info}</Info>
             <Tags>{this.props.tags}</Tags>
           </RightWrapper>
-        </Wrapper>
+        </Link>
         <Separator />
       </article>
     );
