@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React, { Component } from "react";
+import styled, { css } from "styled-components";
 
 const Wrapper = styled.label`
   position: relative;
@@ -29,30 +29,43 @@ const Slider = styled.span`
     background: #fff;
     border-radius: 100%;
   }
+
+  ${props =>
+    props.checked &&
+    css`
+      background-color: #ff6060;
+      opacity: 1;
+
+      :before {
+        -webkit-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        transform: translateX(10px);
+      }
+    `};
 `;
 
 const Checkbox = styled.input`
   display: none;
 
   &:checked + ${Slider} {
-    background-color: #ff6060;
-    opacity: 1;
   }
 
   &:checked + ${Slider}:before {
-    -webkit-transform: translateX(10px);
-    -ms-transform: translateX(10px);
-    transform: translateX(10px);
   }
 `;
 
-function Switch() {
-  return (
-    <Wrapper>
-      <Checkbox type="checkbox" />
-      <Slider />
-    </Wrapper>
-  );
+class Switch extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <Wrapper>
+        <Slider checked={this.props.checked} />
+      </Wrapper>
+    );
+  }
 }
 
 export default Switch;

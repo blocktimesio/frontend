@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 import Switch from "../../common/Switch";
+import Separator from "../../common/Separator";
 
 const Settings = styled.div`
   display: flex;
@@ -20,7 +21,15 @@ const Order = styled.div`
   font-size: 15px;
   line-height: 1.38;
   color: #afafaf;
-  border-bottom: 1px solid #ebebeb;
+  background: none;
+`;
+
+const OrderButton = styled.button`
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: transparent;
+  border: none;
 `;
 
 const OrderText = styled.span`
@@ -38,8 +47,6 @@ const Theme = styled.div`
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-bottom: 0.75rem;
-
-  border-bottom: 1px solid #ebebeb;
 `;
 
 const ThemeDot = styled.span`
@@ -60,20 +67,51 @@ const ThemeText = styled.span`
   color: #232323;
 `;
 
+const SettingsSeparator = Separator.extend`
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+`;
+
+class OrderFilter extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      checked: true
+    };
+    this.toggle = this.toggle.bind(this);
+  }
+
+  toggle() {
+    this.setState((prevState, prevProps) => ({
+      checked: !prevState.checked
+    }));
+  }
+
+  render() {
+    return (
+      <OrderButton type="button" onClick={this.toggle}>
+        <Order>
+          <OrderText>Show in order</OrderText>
+          <Switch checked={this.state.checked} />
+        </Order>
+      </OrderButton>
+    );
+  }
+}
+
 export default function() {
   return (
     <Settings>
       <div className="col-xs-12">
-        <Order>
-          <OrderText>Show in order</OrderText>
-          <Switch />
-        </Order>
+        <OrderFilter />
+        <SettingsSeparator />
       </div>
       <div className="col-xs-12">
         <Theme>
           <ThemeDot />
           <ThemeText>Bitcoin is edgy and stable, they said…</ThemeText>
         </Theme>
+        <SettingsSeparator />
       </div>
       <div className="col-md-4" />
     </Settings>

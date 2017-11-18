@@ -26,7 +26,7 @@ class LoadButton extends Component {
 
   render() {
     return (
-      <Button>
+      <Button type="button">
         <Image src={loadMoreIcon} />
       </Button>
     );

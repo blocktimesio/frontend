@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import Separator from "../../../common/Separator";
 
 const Link = styled.a`
   display: flex;
@@ -11,17 +12,6 @@ const Link = styled.a`
 
   text-decoration: none;
   overflow-wrap: break-word;
-`;
-
-const Separator = styled.hr`
-  margin: 0;
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
-  padding: 0;
-  height: 1px;
-
-  background-color: #ebebeb;
-  border: none;
 `;
 
 const LeftWrapper = styled.div`
@@ -74,6 +64,11 @@ const Tags = styled.p`
   color: #ff6060;
 `;
 
+const ArticleSeparator = Separator.extend`
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+`;
+
 class Article extends Component {
   constructor(props) {
     super(props);
@@ -94,7 +89,7 @@ class Article extends Component {
             <Tags>{this.props.tags}</Tags>
           </RightWrapper>
         </Link>
-        <Separator />
+        <ArticleSeparator />
       </article>
     );
   }
