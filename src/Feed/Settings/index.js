@@ -19,7 +19,7 @@ const Order = styled.div`
   padding-bottom: 0.75rem;
 
   font-size: 15px;
-  line-height: 1.38;
+  line-height: 1.38rem;
   color: #afafaf;
   background: none;
 `;
@@ -63,7 +63,7 @@ const ThemeText = styled.span`
   position: relative;
   font-size: 1rem;
   font-weight: 500;
-  line-height: 1.38;
+  line-height: 1.38rem;
   color: #232323;
 `;
 

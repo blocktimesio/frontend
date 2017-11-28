@@ -55,7 +55,7 @@ const Info = styled.p`
   margin: 0;
   padding: 0;
   font-size: 0.8125rem;
-  line-height: 1.38;
+  line-height: 1.38rem;
   color: #767676;
 `;
 

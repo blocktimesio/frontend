@@ -1,22 +1,29 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import loadMoreIcon from "../../assets/load-more-icon.svg";
 
-const Button = styled.button`
-  display: flex;
-  justify-content: center;
-  margin: 0;
+const Wrapper = styled.div`
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
   padding: 1rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  width: 100%;
-  border: none;
-  background-color: transparent;
 `;
 
-const Image = styled.img`
-  width: 1rem;
-  height: 1rem;
+const Button = styled.button`
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-top: 17px;
+  padding-bottom: 22px;
+  height: 3.5rem;
+  width: 100%;
+
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #ff6060;
+
+  border: 1px solid #ff6060;
+  background-color: transparent;
+
+  cursor: pointer;
 `;
 
 class LoadButton extends Component {
@@ -26,9 +33,9 @@ class LoadButton extends Component {
 
   render() {
     return (
-      <Button type="button">
-        <Image src={loadMoreIcon} />
-      </Button>
+      <Wrapper>
+        <Button type="button">Show more</Button>
+      </Wrapper>
     );
   }
 }
