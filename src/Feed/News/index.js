@@ -12,10 +12,10 @@ function News() {
   return (
     <Container>
       <Article
-        title="EU Officials Reveal €5 Million 'Blockchains for Social Good' Contest"
+        title="Online Bank Swissquote Launches Bitcoin Exchange-Traded Product"
         date="2h"
         info="     @funnycryptoguy · 26K views · 1405 comments"
-        tags="XRP"
+        tags="GOV"
       />
       <Article
         title="Cryptocurrency Mining Sales Cool in Q3, Says Nvidia"

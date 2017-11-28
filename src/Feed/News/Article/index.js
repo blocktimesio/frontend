@@ -37,8 +37,18 @@ const Title = styled.h3`
   padding: 0;
   font-size: 1rem;
   font-weight: 500;
-  line-height: 1.38;
-  color: #232323;
+  line-height: 1.5rem;
+  color: #0d0d0d;
+`;
+
+const Tags = styled.span`
+  padding-left: 0.5rem;
+
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+
+  color: #ff6060;
 `;
 
 const Info = styled.p`
@@ -46,18 +56,7 @@ const Info = styled.p`
   padding: 0;
   font-size: 0.8125rem;
   line-height: 1.38;
-  color: #afafaf;
-`;
-
-const Tags = styled.p`
-  margin: 0;
-  margin-top: 0.625rem;
-  padding: 0;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  line-height: 15px;
-  letter-spacing: 0.4px;
-  color: #ff6060;
+  color: #767676;
 `;
 
 const ArticleSeparator = Separator.extend`
@@ -78,9 +77,11 @@ class Article extends Component {
             <Date>{this.props.date}</Date>
           </LeftWrapper>
           <RightWrapper>
-            <Title>{this.props.title}</Title>
+            <Title>
+              {this.props.title}
+              <Tags>{this.props.tags}</Tags>
+            </Title>
             <Info>{this.props.info}</Info>
-            <Tags>{this.props.tags}</Tags>
           </RightWrapper>
         </Link>
         <ArticleSeparator />
