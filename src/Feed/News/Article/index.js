@@ -38,10 +38,6 @@ const Title = styled.h3`
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.38;
-`;
-
-const TitleLink = styled.a`
-  text-decoration: none;
   color: #232323;
 `;
 
@@ -82,9 +78,7 @@ class Article extends Component {
             <Date>{this.props.date}</Date>
           </LeftWrapper>
           <RightWrapper>
-            <Title>
-              <TitleLink href="#">{this.props.title}</TitleLink>
-            </Title>
+            <Title>{this.props.title}</Title>
             <Info>{this.props.info}</Info>
             <Tags>{this.props.tags}</Tags>
           </RightWrapper>
