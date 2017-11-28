@@ -4,7 +4,7 @@ import Header from "./Header";
 import Feed from "./Feed";
 
 const Main = styled.main`
-  font-family: "Intel UI", Arial, sans-serif;
+  font-family: "Inter UI", Arial, sans-serif;
 `;
 
 function App() {

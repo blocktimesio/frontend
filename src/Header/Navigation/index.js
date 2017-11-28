@@ -1,31 +1,43 @@
 import React, { Component } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const Navigation = styled.nav`
   display: flex;
-
-  a:last-child {
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-  }
 `;
 
 const Link = styled.a`
   display: block;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  line-height: 3.5rem;
-  font-size: 15px;
-  font-weight: 500;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+
+  font-size: 13px;
   text-decoration: none;
-  color: #fff;
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  color: #a0a0a0;
 `;
 
-export default function() {
+const Title = styled.span`
+  padding-bottom: 2px;
+
+  ${props =>
+    props.selected &&
+    css`
+      color: #fff;
+      border-bottom: 1px solid #ffffff;
+    `};
+`;
+
+export default function(props) {
   return (
     <Navigation>
-      <Link href="#">Feed</Link>
-      <Link href="#">Stories</Link>
+      <Link href="#recent">
+        <Title selected={true}>Recent</Title>
+      </Link>
+      <Link href="#top">
+        <Title selected={false}>Top</Title>
+      </Link>
+      <Link href="#stories">
+        <Title selected={false}>Stories</Title>
+      </Link>
     </Navigation>
   );
 }

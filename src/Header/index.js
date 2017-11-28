@@ -6,14 +6,18 @@ import login from "../assets/log-in.svg";
 import Navigation from "./Navigation";
 
 const Header = styled.header`
-  background-color: #232323;
+  background-color: #0d0d0d;
+  overflow-x: hidden;
 `;
 
 const Content = styled.div`
   display: flex;
   justify-content: space-between;
 
-  height: 3.5rem;
+  height: 3rem;
+
+  // font-weight: 500;
+  line-height: 3rem;
   margin-left: -0.5rem;
   margin-right: -0.5rem;
 
@@ -24,21 +28,20 @@ const Logo = styled.a`
   display: flex;
 
   height: 100%;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  padding-left: 1rem;
+  // padding-right: 1rem;
 `;
 
 const Login = styled.a`
-  display: flex;
-  justify-content: center;
+  padding-right: 1rem;
 
-  height: 100%;
-  width: 3.5rem;
+  font-size: 13px;
+
+  color: #a0a0a0;
+  text-decoration: none;
 `;
 
-const RightWrapper = styled.div`
-  display: flex;
-`;
+const RightWrapper = styled.div``;
 
 export default function() {
   return (
@@ -48,12 +51,8 @@ export default function() {
           <Logo href="#">
             <img alt="Blocktimes" src={logo} />
           </Logo>
-          <RightWrapper>
-            <Navigation />
-            <Login href="#">
-              <img alt="Login" src={login} />
-            </Login>
-          </RightWrapper>
+          <Navigation />
+          <Login href="#profile">Profile</Login>
         </Content>
       </div>
     </Header>
