@@ -28,7 +28,7 @@ const Date = styled.time`
   font-size: 13px;
   font-weight: 100;
   line-height: 15px;
-  color: #afafaf;
+  color: #767676;
 `;
 
 const Title = styled.h3`

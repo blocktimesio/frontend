@@ -4,8 +4,8 @@ import Article from "./Article";
 import LoadButton from "../LoadButton";
 
 const Container = styled.section`
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 `;
 
 function News() {
