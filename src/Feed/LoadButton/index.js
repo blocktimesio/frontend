@@ -22,6 +22,7 @@ const Button = styled.button`
 
   border: 1px solid #ff6060;
   background-color: transparent;
+  border-radius: 0.25rem;
 
   cursor: pointer;
 `;

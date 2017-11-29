@@ -60,8 +60,8 @@ const Info = styled.p`
 `;
 
 const ArticleSeparator = Separator.extend`
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
 `;
 
 class Article extends Component {
