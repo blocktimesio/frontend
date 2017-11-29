@@ -6,6 +6,11 @@ import LoadButton from "../LoadButton";
 const Container = styled.section`
   padding-left: 1rem;
   padding-right: 1rem;
+
+  @media only screen and (min-width: 62rem) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 `;
 
 function News() {

@@ -62,6 +62,11 @@ const Info = styled.p`
 const ArticleSeparator = Separator.extend`
   margin-left: -1rem;
   margin-right: -1rem;
+
+  @media only screen and (min-width: 62rem) {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
 `;
 
 class Article extends Component {
