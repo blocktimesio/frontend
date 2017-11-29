@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Header from "./Header";
 import Feed from "./Feed";
+import Footer from "./Footer";
+import { Lg } from "./common/Responsive";
 
 const Main = styled.main`
   font-family: "Inter UI", Arial, sans-serif;
@@ -29,6 +31,9 @@ function App() {
           <Feed />
         </div>
       </Content>
+      <Lg>
+        <Footer />
+      </Lg>
     </Main>
   );
 }
