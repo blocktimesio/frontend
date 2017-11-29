@@ -20,21 +20,23 @@ const Content = styled.div`
   line-height: 3rem;
   margin-left: -0.5rem;
   margin-right: -0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
   color: #ffffff;
+
+  @media only screen and (min-width: 62rem) {
+    padding: 0;
+  }
 `;
 
 const Logo = styled.a`
   display: flex;
 
   height: 100%;
-  padding-left: 1rem;
-  // padding-right: 1rem;
 `;
 
 const Login = styled.a`
-  padding-right: 1rem;
-
   font-size: 13px;
 
   color: #a0a0a0;

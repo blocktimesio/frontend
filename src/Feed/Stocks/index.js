@@ -14,6 +14,10 @@ const Container = styled.section`
   margin-right: -0.5rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+
+  @media only screen and (min-width: 62rem) {
+    margin-bottom: 0.25rem;
+  }
 `;
 
 function Stocks() {
