@@ -17,11 +17,21 @@ const Link = styled.a`
 const LeftWrapper = styled.div`
   flex-basis: 12.16216216%;
   max-width: 12.16216216%;
+
+  @media only screen and (min-width: 62rem) {
+    flex-basis: 5.912052%;
+    max-width: 5.912052%;
+  }
 `;
 
 const RightWrapper = styled.div`
   flex-basis: 83.783783%;
   max-width: 83.783783%;
+
+  @media only screen and (min-width: 62rem) {
+    flex-basis: 91.776315%;
+    max-width: 91.776315%;
+  }
 `;
 
 const Date = styled.time`
