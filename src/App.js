@@ -22,8 +22,13 @@ const Content = styled.div`
   padding-right: 8px;
 
   @media only screen and (min-width: 62rem) {
-    // width: 61rem;
-    // max-width: 100%;
+    width: 61rem;
+    max-width: 100%;
+  }
+
+  @media only screen and (min-width: 75rem) {
+    width: 74rem;
+    max-width: 100%;
   }
 `;
 
@@ -31,7 +36,7 @@ function App() {
   return (
     <Main>
       <Header />
-      <Content className="container">
+      <Content>
         <div className="row">
           <Switch>
             <Route exact path="/" component={Feed} />
