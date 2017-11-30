@@ -19,6 +19,13 @@ const Content = styled.div`
   padding-bottom: 2.25rem;
 
   color: #ffffff;
+
+  @media only screen and (min-width: 62rem) {
+    padding-top: 2.5rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding-bottom: 2.5rem;
+  }
 `;
 
 const Header = styled.div`
@@ -50,10 +57,15 @@ const HeaderDescription = styled.span`
 `;
 
 const Articles = styled.div`
-  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
-  :last-child {
-    margin-bottom: 0;
+  margin-top: 2rem;
+  padding: 0;
+
+  @media only screen and (min-width: 62rem) {
+    margin-top: 0;
   }
 `;
 
@@ -62,13 +74,13 @@ function Stories() {
     <StoriesWrapper>
       <div className="container">
         <Content>
-          <Header className="col-xs-12">
+          <Header className="col-xs-12 col-lg-3">
             <HeaderLink href="/stories">
               <HeaderTitle>Stories</HeaderTitle>
               <HeaderDescription>To all stories</HeaderDescription>
             </HeaderLink>
           </Header>
-          <Articles>
+          <Articles className="col-xs-12 col-lg-9">
             <Article
               title="Bitcoin Price Falls After Reaching Record High Over The Weekend"
               info="14:21 · 2.5K views · 144 comments"

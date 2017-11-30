@@ -2,8 +2,15 @@ import React from "react";
 import styled from "styled-components";
 
 const Link = styled.a`
+  display: inline-block;
+
   text-decoration: none;
   color: #ffffff;
+
+  @media only screen and (min-width: 62rem) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 `;
 
 const ArticleWrapper = styled.article`
@@ -30,7 +37,7 @@ const Info = styled.p`
 
 function Article(props) {
   return (
-    <ArticleWrapper className="col-xs-12">
+    <ArticleWrapper className="col-xs-12 col-lg-4">
       <Link href="/news">
         <Title>{props.title}</Title>
         <Info>{props.info}</Info>

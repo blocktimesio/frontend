@@ -22,8 +22,8 @@ const Content = styled.div`
   padding-right: 8px;
 
   @media only screen and (min-width: 62rem) {
-    width: 61rem;
-    max-width: 100%;
+    // width: 61rem;
+    // max-width: 100%;
   }
 `;
 
@@ -31,7 +31,7 @@ function App() {
   return (
     <Main>
       <Header />
-      <Content>
+      <Content className="container">
         <div className="row">
           <Switch>
             <Route exact path="/" component={Feed} />
@@ -41,7 +41,7 @@ function App() {
       </Content>
       <Route
         path="/"
-        render={({ match }) => (match.isExact ? "" : <Footer />)}
+        render={({ match }) => (match.isExact ? <Footer /> : <Footer />)}
       />
     </Main>
   );
