@@ -28,10 +28,6 @@ const Button = styled.button`
 `;
 
 class LoadButton extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <Wrapper>

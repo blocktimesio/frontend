@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import styled, { css } from "styled-components";
+import { Route, Link } from "react-router-dom";
 
 const Navigation = styled.nav`
   display: flex;
 `;
 
-const Link = styled.a`
+const StyledLink = styled(Link)`
   display: block;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -26,18 +27,23 @@ const Title = styled.span`
     `};
 `;
 
+const NavigationLink = ({ label, to }) => (
+  <Route
+    path={to}
+    children={({ match }) => (
+      <StyledLink to={to}>
+        <Title selected={match ? match.isExact : false}>{label}</Title>
+      </StyledLink>
+    )}
+  />
+);
+
 export default function(props) {
   return (
     <Navigation>
-      <Link href="#recent">
-        <Title selected={true}>Recent</Title>
-      </Link>
-      <Link href="#top">
-        <Title selected={false}>Top</Title>
-      </Link>
-      <Link href="#stories">
-        <Title selected={false}>Stories</Title>
-      </Link>
+      <NavigationLink to="/" label="Recent" />
+      <NavigationLink to="/top" label="Top" />
+      <NavigationLink to="/stories" label="Stories" />
     </Navigation>
   );
 }

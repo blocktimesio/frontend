@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import logo from "../assets/logo.svg";
 import login from "../assets/log-in.svg";
@@ -30,13 +31,13 @@ const Content = styled.div`
   }
 `;
 
-const Logo = styled.a`
+const Logo = styled(Link)`
   display: flex;
 
   height: 100%;
 `;
 
-const Login = styled.a`
+const Login = styled(Link)`
   font-size: 13px;
 
   color: #a0a0a0;
@@ -50,11 +51,11 @@ export default function() {
     <Header>
       <div className="container">
         <Content>
-          <Logo href="#">
+          <Logo to="/">
             <img alt="Blocktimes" src={logo} />
           </Logo>
           <Navigation />
-          <Login href="#profile">Profile</Login>
+          <Login to="/profile">Profile</Login>
         </Content>
       </div>
     </Header>

@@ -2,7 +2,13 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import Separator from "../../../common/Separator";
 
-const Link = styled.a`
+import { Link } from "react-router-dom";
+
+const ArticleLink = ({ className, children }) => (
+  <a className={className}>{children}</a>
+);
+
+const LinkWrapper = styled(Link)`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -85,9 +91,15 @@ class Article extends Component {
   }
 
   render() {
+    const titleArray = this.props.title.split(" ");
+    const titleUrlString = titleArray.join("-");
+    console.log(titleUrlString);
+
+    const url = "/news/" + titleUrlString;
+
     return (
       <article>
-        <Link href="#">
+        <LinkWrapper to={url}>
           <LeftWrapper>
             <Date>{this.props.date}</Date>
           </LeftWrapper>
@@ -98,7 +110,7 @@ class Article extends Component {
             </Title>
             <Info>{this.props.info}</Info>
           </RightWrapper>
-        </Link>
+        </LinkWrapper>
         <ArticleSeparator />
       </article>
     );

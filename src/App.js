@@ -1,8 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+
+import { Switch, Route } from "react-router-dom";
+
 import Header from "./Header";
 import Feed from "./Feed";
+import NewsPage from "./NewsPage";
 import Footer from "./Footer";
+
 import { Lg } from "./common/Responsive";
 
 const Main = styled.main`
@@ -28,10 +33,16 @@ function App() {
       <Header />
       <Content>
         <div className="row">
-          <Feed />
+          <Switch>
+            <Route exact path="/" component={Feed} />
+            <Route path="/news/:name" component={NewsPage} />
+          </Switch>
         </div>
       </Content>
-      <Footer />
+      <Route
+        path="/"
+        render={({ match }) => (match.isExact ? "" : <Footer />)}
+      />
     </Main>
   );
 }
