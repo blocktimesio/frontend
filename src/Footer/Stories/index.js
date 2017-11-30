@@ -67,6 +67,10 @@ const Articles = styled.div`
   @media only screen and (min-width: 62rem) {
     margin-top: 0;
   }
+
+  & > article:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 function Stories() {
