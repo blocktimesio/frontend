@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import Article from "./Article";
 
 const StoriesWrapper = styled.section`
@@ -33,7 +34,7 @@ const Header = styled.div`
   padding: 0;
 `;
 
-const HeaderLink = styled.a`
+const HeaderLink = styled(Link)`
   display: inline-block;
 
   text-decoration: none;
@@ -79,7 +80,7 @@ function Stories() {
       <div className="container">
         <Content>
           <Header className="col-xs-12 col-lg-3">
-            <HeaderLink href="/stories">
+            <HeaderLink to="/stories">
               <HeaderTitle>Stories</HeaderTitle>
               <HeaderDescription>To all stories</HeaderDescription>
             </HeaderLink>

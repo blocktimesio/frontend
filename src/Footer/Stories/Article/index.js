@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-const Link = styled.a`
+const StyledLink = styled(Link)`
   display: inline-block;
 
   text-decoration: none;
@@ -15,7 +16,11 @@ const Link = styled.a`
 
 const ArticleWrapper = styled.article`
   margin-bottom: 2rem;
-  padding: 0;
+  padding: 0rem;
+
+  @media only screen and (min-width: 62rem) {
+    margin-bottom: 0rem;
+  }
 `;
 
 const Title = styled.h4`
@@ -38,10 +43,10 @@ const Info = styled.p`
 function Article(props) {
   return (
     <ArticleWrapper className="col-xs-12 col-lg-4">
-      <Link href="/news">
+      <StyledLink to="/stories">
         <Title>{props.title}</Title>
         <Info>{props.info}</Info>
-      </Link>
+      </StyledLink>
     </ArticleWrapper>
   );
 }

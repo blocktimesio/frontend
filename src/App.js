@@ -41,7 +41,15 @@ function App() {
       </Content>
       <Route
         path="/"
-        render={({ match }) => (match.isExact ? <Footer /> : <Footer />)}
+        render={({ match }) =>
+          match.isExact ? (
+            <Lg>
+              <Footer />
+            </Lg>
+          ) : (
+            <Footer />
+          )
+        }
       />
     </Main>
   );
