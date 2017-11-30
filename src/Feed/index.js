@@ -10,7 +10,6 @@ const Wrapper = styled.section`
 function Feed() {
   return (
     <Wrapper className="col-xs-12 col-lg-8">
-      <Stocks />
       <News />
     </Wrapper>
   );

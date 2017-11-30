@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import { Switch, Route } from "react-router-dom";
 
+import Stocks from "./Feed/Stocks";
 import Header from "./Header";
 import Feed from "./Feed";
 import NewsPage from "./NewsPage";
@@ -36,6 +37,7 @@ function App() {
   return (
     <Main>
       <Header />
+      <Stocks />
       <Content>
         <div className="row">
           <Switch>
