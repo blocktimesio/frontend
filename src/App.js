@@ -37,7 +37,7 @@ function App() {
   return (
     <Main>
       <Header />
-      <Stocks />
+      <Route exact path="/" component={Stocks} />
       <Content>
         <div className="row">
           <Switch>
