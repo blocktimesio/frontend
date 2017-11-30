@@ -8,10 +8,10 @@ const Wrapper = styled.section`
 const Content = styled.div`
   margin-left: -0.5rem;
   margin-right: -0.5rem;
-  padding-top: 2.5rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-bottom: 2.5rem;
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 2rem;
 
   color: #ffffff;
 `;

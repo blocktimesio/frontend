@@ -31,9 +31,7 @@ function App() {
           <Feed />
         </div>
       </Content>
-      <Lg>
-        <Footer />
-      </Lg>
+      <Footer />
     </Main>
   );
 }
