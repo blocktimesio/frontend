@@ -14,16 +14,16 @@ const Header = styled.header`
 const Content = styled.div`
   display: flex;
   justify-content: space-between;
-
+  align-items: center;
   height: 3rem;
 
   // font-weight: 500;
-  line-height: 3rem;
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
 
+  line-height: 3rem;
   color: #ffffff;
 
   @media only screen and (min-width: 62rem) {
