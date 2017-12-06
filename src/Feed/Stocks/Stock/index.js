@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-const Container = styled.div`
+const Wrapper = styled.div`
   padding-left: 1rem;
   padding-right: 1rem;
 `;
@@ -45,13 +45,13 @@ class Stock extends Component {
 
   render() {
     return (
-      <Container>
+      <Wrapper>
         <TopWrapper>
           <Title>{this.props.title}</Title>
           <Delta>{this.props.delta}</Delta>
         </TopWrapper>
         <Price>{this.props.price}</Price>
-      </Container>
+      </Wrapper>
     );
   }
 }

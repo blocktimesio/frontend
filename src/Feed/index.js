@@ -17,23 +17,23 @@ const Wrapper = styled.div`
   }
 `;
 
-const FeedContainer = styled.section`
+const FeedContent = styled.section`
   padding: 0;
 `;
 
-const AdContainer = styled.div`
+const AdContent = styled.div`
   margin-top: 0.75rem;
 `;
 
 function Feed() {
   return (
     <Wrapper className="col-xs-12">
-      <FeedContainer className="col-xs-12 col-lg-8">
+      <FeedContent className="col-xs-12 col-lg-8">
         <News />
-      </FeedContainer>
-      <AdContainer>
+      </FeedContent>
+      <AdContent>
         <AdSection />
-      </AdContainer>
+      </AdContent>
     </Wrapper>
   );
 }

@@ -12,7 +12,7 @@ const Wrapper = styled.section`
   }
 `;
 
-const Container = styled.div`
+const Content = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -96,7 +96,7 @@ function NewsPage(props) {
       <Info>
         Inc. · 26K views · 1405 comments<Tags>XRP</Tags>
       </Info>
-      <Container>
+      <Content>
         <Article className="col-xs-12 col-lg-8">
           <Text>
             <p>
@@ -130,7 +130,7 @@ function NewsPage(props) {
           </Text>
         </Article>
         <AdSection />
-      </Container>
+      </Content>
     </Wrapper>
   );
 }

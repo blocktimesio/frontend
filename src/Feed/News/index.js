@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Article from "./Article";
 import LoadButton from "../LoadButton";
 
-const Container = styled.section`
+const Wrapper = styled.section`
   padding-left: 1rem;
   padding-right: 1rem;
 
@@ -15,7 +15,7 @@ const Container = styled.section`
 
 function News() {
   return (
-    <Container>
+    <Wrapper>
       <Article
         title="Online Bank Swissquote Launches Bitcoin Exchange-Traded Product"
         date="2h"
@@ -65,7 +65,7 @@ function News() {
         tags="BTC, RISE"
       />
       <LoadButton />
-    </Container>
+    </Wrapper>
   );
 }
 

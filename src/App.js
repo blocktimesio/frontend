@@ -16,7 +16,7 @@ const Main = styled.main`
   font-family: "Inter UI", Arial, sans-serif;
 `;
 
-const Content = styled.div`
+const Container = styled.div`
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
@@ -42,14 +42,14 @@ function App() {
       </Helmet>
       <Header />
       <Route exact path="/" component={Stocks} />
-      <Content>
+      <Container>
         <div className="row">
           <Switch>
             <Route exact path="/" component={Feed} />
             <Route path="/news/:name" component={NewsPage} />
           </Switch>
         </div>
-      </Content>
+      </Container>
       <Route
         path="/"
         render={({ match }) =>

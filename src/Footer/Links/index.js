@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import fbIcon from "../../assets/facebook-footer.svg";
 import twitterIcon from "../../assets/twitter-footer.svg";
 
-const LinksWrapper = styled.section`
+const Wrapper = styled.section`
   background-color: #0d0d0d;
 `;
 
@@ -31,7 +31,7 @@ const Content = styled.div`
   }
 `;
 
-const LinksContainer = styled.nav`
+const PagesWrapper = styled.nav`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -78,15 +78,15 @@ const SocialLink = styled.a`
 
 function Links() {
   return (
-    <LinksWrapper>
+    <Wrapper>
       <div className="container">
         <Content>
-          <LinksContainer>
+          <PagesWrapper>
             <StyledLink to="/about">About Blocktimes</StyledLink>
             <StyledLink to="/ads">Advertisments</StyledLink>
             <StyledLink to="/faq">FAQ</StyledLink>
             <StyledLink to="/privacy">Privaсy Policy</StyledLink>
-          </LinksContainer>
+          </PagesWrapper>
           <SocialWrapper>
             <SocialLink href="#">
               <img src={twitterIcon} />
@@ -97,7 +97,7 @@ function Links() {
           </SocialWrapper>
         </Content>
       </div>
-    </LinksWrapper>
+    </Wrapper>
   );
 }
 

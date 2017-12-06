@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Article from "./Article";
 
-const StoriesWrapper = styled.section`
+const Wrapper = styled.section`
   background-color: #0d0d0d;
 `;
 
@@ -76,7 +76,7 @@ const Articles = styled.div`
 
 function Stories() {
   return (
-    <StoriesWrapper>
+    <Wrapper>
       <div className="container">
         <Content>
           <Header className="col-xs-12 col-lg-3">
@@ -101,7 +101,7 @@ function Stories() {
           </Articles>
         </Content>
       </div>
-    </StoriesWrapper>
+    </Wrapper>
   );
 }
 

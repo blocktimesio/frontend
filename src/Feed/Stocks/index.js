@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   background-color: #f8f8f8;
 `;
 
-const Container = styled.section`
+const Content = styled.section`
   display: flex;
   overflow-x: scroll;
 
@@ -26,13 +26,13 @@ function Stocks() {
   return (
     <Wrapper>
       <div className="container">
-        <Container>
+        <Content>
           <Stock title="BTC" delta="+433.21" price="$9,922.66" />
           <Stock title="XRP" delta="+21.21" price="$54.11" />
           <Stock title="ETH" delta="-1.34" price="$451.26" />
           <Stock title="ETH" delta="-1.34" price="$451.26" />
           <Stock title="ETH" delta="-1.34" price="$451.26" />
-        </Container>
+        </Content>
       </div>
     </Wrapper>
   );

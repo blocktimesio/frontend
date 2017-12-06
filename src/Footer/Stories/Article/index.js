@@ -14,7 +14,7 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const ArticleWrapper = styled.article`
+const Wrapper = styled.article`
   margin-bottom: 2rem;
   padding: 0rem;
 
@@ -42,12 +42,12 @@ const Info = styled.p`
 
 function Article(props) {
   return (
-    <ArticleWrapper className="col-xs-12 col-lg-4">
+    <Wrapper className="col-xs-12 col-lg-4">
       <StyledLink to="/stories">
         <Title>{props.title}</Title>
         <Info>{props.info}</Info>
       </StyledLink>
-    </ArticleWrapper>
+    </Wrapper>
   );
 }
 
