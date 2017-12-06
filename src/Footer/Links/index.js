@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 import fbIcon from "../../assets/facebook-footer.svg";
 import twitterIcon from "../../assets/twitter-footer.svg";
 
-const Wrapper = styled.section`
+const Wrapper = styled.div`
   background-color: #0d0d0d;
 `;
 
-const Content = styled.div`
+const Content = styled.section`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

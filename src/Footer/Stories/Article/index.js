@@ -32,7 +32,8 @@ const Title = styled.h4`
   line-height: 1.5rem;
 `;
 
-const Info = styled.p`
+const Info = styled.span`
+  display: block;
   margin: 0;
 
   font-size: 13px;

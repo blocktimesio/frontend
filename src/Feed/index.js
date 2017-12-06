@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const FeedContent = styled.section`
+const FeedContent = styled.div`
   padding: 0;
 `;
 

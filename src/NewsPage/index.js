@@ -47,7 +47,8 @@ const Title = styled.h1`
   }
 `;
 
-const Info = styled.p`
+const Info = styled.span`
+  display: block;
   margin: 0;
   padding: 0;
 

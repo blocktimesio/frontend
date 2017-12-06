@@ -67,9 +67,11 @@ const Tags = styled.span`
   color: #ff6060;
 `;
 
-const Info = styled.p`
+const Info = styled.span`
+  display: block;
   margin: 0;
   padding: 0;
+
   font-size: 0.8125rem;
   line-height: 1.38rem;
   color: #767676;
