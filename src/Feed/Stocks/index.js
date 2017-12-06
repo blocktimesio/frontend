@@ -16,8 +16,6 @@ const Container = styled.section`
   padding-bottom: 1rem;
 
   @media only screen and (min-width: 62rem) {
-    margin-bottom: 0.25rem;
-
     & > div:first-child {
       padding-left: 0;
     }
