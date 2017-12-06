@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { Switch, Route } from "react-router-dom";
+import Helmet from "react-helmet";
 
 import Stocks from "./Feed/Stocks";
 import Header from "./Header";
@@ -36,6 +37,9 @@ const Content = styled.div`
 function App() {
   return (
     <Main>
+      <Helmet>
+        <title>Blocktimes</title>
+      </Helmet>
       <Header />
       <Route exact path="/" component={Stocks} />
       <Content>
