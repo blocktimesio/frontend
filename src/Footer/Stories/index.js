@@ -25,7 +25,7 @@ const Content = styled.section`
     padding-top: 2.5rem;
     padding-left: 0rem;
     padding-right: 0rem;
-    padding-bottom: 2.5rem;
+    padding-bottom: 0.5rem;
   }
 `;
 
@@ -60,7 +60,6 @@ const HeaderDescription = styled.span`
 
 const Articles = styled.div`
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 
   margin-top: 2rem;
@@ -87,6 +86,26 @@ function Stories() {
             </HeaderLink>
           </Header>
           <Articles className="col-xs-12 col-lg-9">
+            <Article
+              title="Bitcoin Price Falls After Reaching Record High Over The Weekend"
+              info="14:21 · 2.5K views · 144 comments"
+            />
+            <Article
+              title="Bitcoin Price Falls After Reaching Record High Over The Weekend"
+              info="14:21 · 2.5K views · 144 comments"
+            />
+            <Article
+              title="Bitcoin Price Falls After Reaching Record High Over The Weekend"
+              info="14:21 · 2.5K views · 144 comments"
+            />
+            <Article
+              title="Bitcoin Price Falls After Reaching Record High Over The Weekend"
+              info="14:21 · 2.5K views · 144 comments"
+            />
+            <Article
+              title="Bitcoin Price Falls After Reaching Record High Over The Weekend"
+              info="14:21 · 2.5K views · 144 comments"
+            />
             <Article
               title="Bitcoin Price Falls After Reaching Record High Over The Weekend"
               info="14:21 · 2.5K views · 144 comments"

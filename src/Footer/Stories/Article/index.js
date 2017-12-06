@@ -19,7 +19,7 @@ const Wrapper = styled.article`
   padding: 0rem;
 
   @media only screen and (min-width: 62rem) {
-    margin-bottom: 0rem;
+    margin-bottom: 2.25rem;
   }
 `;
 
