@@ -2,6 +2,7 @@
   "name": "blocktimes",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://blocktimes.io",
   "dependencies": {
     "flexboxgrid2": "^7.0.0-alpha12",
     "normalize.css": "^7.0.0",
