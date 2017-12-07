@@ -17,7 +17,7 @@ const TextWrapper = styled.div`
     top: 21.5px;
     left: 1.5rem;
     content: ${props =>
-      props.htmlMy.length == 0 ? "attr(data-placeholder)" : "none"};
+      props.showPlaceholder ? "attr(data-placeholder)" : "none"};
     pointer-events: none;
 
     font-size: 15px;
@@ -85,7 +85,7 @@ class CommentsForm extends Component {
     return (
       <Form onSubmit={this.handleSubmit}>
         <TextWrapper
-          htmlMy={this.state.html}
+          showPlaceholder={this.state.html.length == 0}
           data-placeholder="Write a response..."
         >
           <Textarea
