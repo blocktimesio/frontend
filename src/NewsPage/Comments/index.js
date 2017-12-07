@@ -7,6 +7,8 @@ import Separator from "../../common/Separator";
 const Wrapper = styled.div``;
 
 const CommentsSeparator = styled.hr`
+  margin-top: 0;
+  margin-bottom: 0;
   padding: 0;
   height: 1px;
   background-color: #ebebeb;
