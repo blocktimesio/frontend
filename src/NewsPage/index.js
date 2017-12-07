@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+
 import AdSection from "../common/AdSection";
+import Comments from "./Comments";
 
 const Wrapper = styled.section`
   padding-left: 1rem;
@@ -132,6 +134,7 @@ function NewsPage(props) {
         </Article>
         <AdSection />
       </Content>
+      <Comments />
     </Wrapper>
   );
 }
