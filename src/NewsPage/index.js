@@ -2,11 +2,15 @@ import React from "react";
 import styled from "styled-components";
 
 import AdSection from "../common/AdSection";
+import Separator from "../common/Separator";
+
 import Comments from "./Comments";
 
 const Wrapper = styled.section`
   padding-left: 1rem;
   padding-right: 1rem;
+
+  width: 100%;
 
   @media only screen and (min-width: 62rem) {
     padding-left: 0;
@@ -90,6 +94,15 @@ const Text = styled.div`
   }
 `;
 
+const CommentsSeparator = styled.hr`
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  height: 1px;
+  background-color: #ebebeb;
+  border: none;
+`;
+
 function NewsPage(props) {
   return (
     <Wrapper className="container">
@@ -134,6 +147,7 @@ function NewsPage(props) {
         </Article>
         <AdSection />
       </Content>
+      <CommentsSeparator className="full-width" />
       <Comments />
     </Wrapper>
   );
