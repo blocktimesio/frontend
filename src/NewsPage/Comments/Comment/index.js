@@ -99,6 +99,8 @@ const ReplyButton = styled.button`
 
   background-color: transparent;
   border: none;
+
+  cursor: pointer;
 `;
 
 const FooterRightWrapper = styled.div``;
@@ -114,6 +116,8 @@ const LikeButton = styled.button`
 
   background-color: transparent;
   border: none;
+
+  cursor: pointer;
 `;
 
 const Likes = styled.a`
