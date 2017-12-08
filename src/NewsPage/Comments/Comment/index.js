@@ -82,6 +82,10 @@ const Text = styled.p`
 const Footer = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (min-width: 62rem) {
+    margin-top: 0.25rem;
+  }
 `;
 
 const FooterLeftWrapper = styled.div``;

@@ -13,6 +13,10 @@ const Wrapper = styled.div`
 const CommentsWrapper = styled.div`
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+
+  @media only screen and (min-width: 62rem) {
+    margin-bottom: 1rem;
+  }
 `;
 
 class Comments extends Component {
