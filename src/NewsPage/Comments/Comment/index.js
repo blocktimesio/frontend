@@ -162,10 +162,7 @@ class Comment extends Component {
           <Time>{this.props.time}</Time>
         </Header>
         <Content>
-          <Text>
-            As designers and researchers, it’s our job to know our community and
-            its needs.
-          </Text>
+          <Text>{this.props.text}</Text>
         </Content>
         <Footer>
           <FooterLeftWrapper>
