@@ -1,10 +1,18 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
+import Comment from "./Comment";
 import CommentForm from "./CommentForm";
 
 const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   padding: 0;
+`;
+
+const CommentsWrapper = styled.div`
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 `;
 
 class Comments extends Component {
@@ -12,6 +20,50 @@ class Comments extends Component {
     return (
       <Wrapper className="col-xs-12 col-lg-10">
         <CommentForm />
+        <CommentsWrapper>
+          <Comment
+            root={true}
+            topMargin={false}
+            name="Mr Sadman"
+            time="3h"
+            likesCount={24}
+          />
+          <Comment
+            root={false}
+            topMargin={false}
+            name="Mr Sadman"
+            time="3h"
+            likesCount={24}
+          />
+          <Comment
+            root={false}
+            topMargin={false}
+            name="Mr Sadman"
+            time="3h"
+            likesCount={24}
+          />
+          <Comment
+            root={true}
+            topMargin={true}
+            name="Mr Sadman"
+            time="3h"
+            likesCount={24}
+          />
+          <Comment
+            root={false}
+            topMargin={false}
+            name="Mr Sadman"
+            time="3h"
+            likesCount={24}
+          />
+          <Comment
+            root={false}
+            topMargin={false}
+            name="Mr Sadman"
+            time="3h"
+            likesCount={24}
+          />
+        </CommentsWrapper>
       </Wrapper>
     );
   }

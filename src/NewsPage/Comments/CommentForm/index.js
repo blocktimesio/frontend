@@ -11,6 +11,7 @@ const Form = styled.form`
 const TextWrapper = styled.div`
   position: relative;
   margin: 0;
+  margin-bottom: 1rem;
 
   :before {
     position: absolute;
@@ -54,22 +55,53 @@ const Textarea = styled(ContentEditable)`
   outline: none;
 `;
 
+const Buttons = styled.div`
+  display: flex;
+`;
+
+const ReplyButton = styled.button`
+  margin: 0;
+  margin-right: 1rem;
+
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+
+  font-size: 15px;
+  line-height: 17px;
+
+  color: #ffffff;
+  background-color: #ff6060;
+  border: none;
+  border-radius: 0;
+`;
+
+const CancelButton = styled.button`
+  padding: 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  font-size: 15px;
+  line-height: 17px;
+  color: #767676;
+  background-color: transparent;
+  border: none;
+`;
+
 class CommentsForm extends Component {
   constructor(props) {
     super(props);
 
     this.state = { html: "" };
 
-    this.handleWrapperClick = this.handleWrapperClick.bind(this);
+    this.handleCancel = this.handleCancel.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleWrapperClick(event) {
-    // this.textInput.focus();
-
-    console.log(this.textInput);
-    // ReactDOM.findDOMNode(this.refs.textInput).focus();
+  handleCancel(event) {
+    this.setState({ html: "" });
   }
 
   handleChange(event) {
@@ -89,15 +121,24 @@ class CommentsForm extends Component {
           data-placeholder="Write a response..."
         >
           <Textarea
-            ref={div => {
-              this.textInput = div;
-            }}
+            ref={e => (this.textInput = e)}
             html={this.state.html}
             disabled={false}
             onChange={this.handleChange}
           />
         </TextWrapper>
-        <button type="submit" name="submit_button" />
+        <Buttons>
+          <ReplyButton type="submit" name="submit_button">
+            Reply
+          </ReplyButton>
+          <CancelButton
+            type="button"
+            name="cancel_button"
+            onClick={this.handleCancel}
+          >
+            Cancel
+          </CancelButton>
+        </Buttons>
       </Form>
     );
   }
