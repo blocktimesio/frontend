@@ -89,10 +89,10 @@ function Links() {
           </PagesWrapper>
           <SocialWrapper>
             <SocialLink href="#">
-              <img src={twitterIcon} />
+              <img src={twitterIcon} alt="twitter" />
             </SocialLink>
             <SocialLink href="#">
-              <img src={fbIcon} />
+              <img src={fbIcon} alt="facebook" />
             </SocialLink>
           </SocialWrapper>
         </Content>
