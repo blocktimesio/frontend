@@ -109,7 +109,8 @@ class CommentsForm extends Component {
   }
 
   handleSubmit(event) {
-    alert("A name was submitted: " + this.state.value);
+    this.props.onSend(this.state.html);
+    this.setState({ html: "" });
     event.preventDefault();
   }
 

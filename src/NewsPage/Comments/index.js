@@ -24,6 +24,8 @@ class Comments extends Component {
     super(props);
 
     this.state = { comments: [] };
+
+    this.handleSend = this.handleSend.bind(this);
   }
 
   componentDidMount() {
@@ -85,12 +87,28 @@ class Comments extends Component {
         time: "3h",
         likesCount: 0,
         liked: false,
-        root: false,
-        topMargin: false
+        root: false
       }
     ];
 
     this.setState({ comments: comments });
+  }
+
+  handleSend(text) {
+    const comments = this.state.comments.slice();
+
+    const newComments = [
+      {
+        text: text,
+        name: "Mr Sadman",
+        time: "now",
+        likesCount: 0,
+        liked: false,
+        root: true
+      }
+    ];
+
+    this.setState({ comments: newComments.concat(comments) });
   }
 
   render() {
@@ -101,7 +119,7 @@ class Comments extends Component {
           name={comment.name}
           time={comment.time}
           root={comment.root}
-          topMargin={comment.topMargin}
+          topMargin={index != 0 && comment.root}
           likesCount={comment.likesCount}
           liked={comment.liked}
         />
@@ -110,7 +128,7 @@ class Comments extends Component {
 
     return (
       <Wrapper className="col-xs-12 col-lg-10">
-        <CommentForm />
+        <CommentForm onSend={text => this.handleSend(text)} />
         <CommentsWrapper>{commentsList}</CommentsWrapper>
       </Wrapper>
     );
