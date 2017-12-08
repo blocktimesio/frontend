@@ -156,7 +156,6 @@ class Comment extends Component {
         <Header>
           <AvatarWrapper>
             <AvatarPlaceholder />
-            <Avatar src="" alt="" />
           </AvatarWrapper>
           <Name>{this.props.name}</Name>
           <Time>{this.props.time}</Time>
