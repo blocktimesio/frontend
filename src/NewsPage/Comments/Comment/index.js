@@ -130,11 +130,22 @@ const StyledSeparator = Separator.extend`
 class Comment extends Component {
   constructor(props) {
     super(props);
+
+    this.state = { liked: this.props.liked };
+
+    this.handleLike = this.handleLike.bind(this);
+  }
+
+  handleLike(event) {
+    // alert("s");
+    this.setState((prevState, prevProps) => ({ liked: !prevState.liked }));
   }
 
   render() {
-    const count = this.props.likesCount;
+    const count = this.props.likesCount + (this.state.liked ? 1 : 0);
     const likesString = count + " " + (count == 1 ? "like" : "likes");
+
+    const likeString = this.state.liked ? "Liked" : "Like";
 
     return (
       <Wrapper root={this.props.root} topMargin={this.props.topMargin}>
@@ -159,8 +170,12 @@ class Comment extends Component {
             </ReplyButton>
           </FooterLeftWrapper>
           <FooterRightWrapper>
-            <LikeButton type="button" name="like_button">
-              Like
+            <LikeButton
+              type="button"
+              name="like_button"
+              onClick={this.handleLike}
+            >
+              {likeString}
             </LikeButton>
             <Likes href="#">{likesString}</Likes>
           </FooterRightWrapper>

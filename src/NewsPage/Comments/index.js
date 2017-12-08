@@ -58,7 +58,7 @@ class Comments extends Component {
             topMargin={false}
             name="Mr Sadman"
             time="3h"
-            likesCount={24}
+            likesCount={0}
           />
           <Comment
             root={false}
